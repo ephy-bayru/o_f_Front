@@ -13,6 +13,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { ProductsModule } from './modules/products/products.module';
 import { ProfileModule } from './modules/profile/profile.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SharedModule,
     AuthModule,
     ProductsModule,
-    ProfileModule
+    ProfileModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
