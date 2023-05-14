@@ -1,27 +1,57 @@
-# OFFront
+# o_f_Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+o_f_Front is a front-end application built with Angular, designed to provide a scalable and modular structure for developing web applications with a focus on maintainability and reusability. It is the front-end counterpart of the OpenFabricAPI.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular for developing the web application
+- TypeScript for static typing and better development experience
+- Modular architecture with lazy-loaded feature modules
+- Route guards for securing routes
+- Interceptors for handling HTTP requests and responses
+- Services for encapsulating business logic
+- Components for UI representation
+- Reactive forms for handling user input
+- Angular Material and Bootstrap for UI design
+- Environment-based configuration
 
-## Code scaffolding
+## Libraries Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- @angular/core
+- @angular/common
+- @angular/forms
+- @angular/router
+- @angular/material
+- bootstrap
 
-## Build
+## Project Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `src` - Contains the main source code for the application
+  - `app` - Contains the main application module and related files
+    - `core` - Contains core features and services of the application
+    - `shared` - Contains components, directives, and pipes that are shared across the application
+    - `layouts` - Contains the main layout for the application
+    - `modules` - Contains the feature modules of the application
+      - `auth` - Contains components related to authentication
+      - `products` - Contains components related to products
+      - `profile` - Contains components related to user profile
+  - `assets` - Contains static assets like images, icons, etc.
+  - `environments` - Contains environment variables
+  - `styles.scss` - Contains global styles for the application
+  - `index.html` - The main HTML page that is served when someone visits your site
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository and navigate to the project root directory.
+2. Run `npm install` to install the dependencies.
+3. Run `ng serve` to start the development server.
+4. Navigate to `http://localhost:4200/` in your browser to view the application.
 
-## Running end-to-end tests
+## Contributing
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Please read the contributing guidelines for the project before making any changes or submitting pull requests.
 
-## Further help
+## Author
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Ephrem Bayru
+  - Email: ephybayru@gmail.com
