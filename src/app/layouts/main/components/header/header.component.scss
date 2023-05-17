@@ -1,0 +1,18 @@
+.header {
+  & {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  &__spacer {
+    flex-grow: 1;
+  }
+
+  &__user-menu-item {
+    &:hover {
+      background-color: #a270f9;
+      color: #fff;
+    }
+  }
+}

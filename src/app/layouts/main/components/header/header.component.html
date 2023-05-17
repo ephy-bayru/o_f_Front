@@ -1,1 +1,29 @@
-<p>header works!</p>
+<mat-toolbar color="primary" class="header">
+  <button
+    mat-icon-button
+    class="header__icon-button"
+    aria-label="Open Fabric icon-button with menu icon"
+  >
+    <mat-icon>code</mat-icon>
+  </button>
+  <span class="header__title">Open Fabric</span>
+
+  <span class="header__spacer"></span>
+
+  <!-- Dropdown Menu for Account floated to right -->
+  <div class="header__user-menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="header__user-menu-icon">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/profile']" class="header__user-menu-item">
+        <mat-icon>account_circle</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item (click)="logout()" class="header__user-menu-item">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
