@@ -1,0 +1,69 @@
+.server-error {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+  
+    &__card {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      height: 120px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  
+    &__title {
+      font-size: 6em;
+      color: #673ab7;
+      position: absolute;
+      top: -5px;
+    }
+  
+    &__content-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    &__content {
+      font-size: 1.5em;
+      color: #757575;
+      padding: 20px 0;
+    }
+  
+    &__actions {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    &__button {
+      z-index: 1;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .server-error__card {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .server-error__actions {
+      bottom: -10px;
+    }
+    .server-error__title {
+      top: -7px; 
+    }
+  }
