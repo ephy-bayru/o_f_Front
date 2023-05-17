@@ -9,12 +9,13 @@ import { HeaderComponent } from './layouts/main/components/header/header.compone
 import { FooterComponent } from './layouts/main/components/footer/footer.component';
 import { MainComponent } from './layouts/main/main.component';
 import { LoginComponent } from './layouts/login/login.component';
-import { AuthModule } from './modules/auth/auth.module';
-import { ProductsModule } from './modules/products/products.module';
-import { ProfileModule } from './modules/profile/profile.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { errorInterceptorProviders } from './core/interceptors/error.interceptor';
+import { jwtInterceptorProviders } from './core/interceptors/jwt.interceptor';
+import { ServerErrorComponent } from './components/server-error/server-error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,19 +23,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     MainComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ServerErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    AuthModule,
-    ProductsModule,
-    ProfileModule,
-    BrowserAnimationsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [...jwtInterceptorProviders, ...errorInterceptorProviders],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
